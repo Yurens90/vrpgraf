@@ -13,7 +13,7 @@ public class Main {
 	      //representar aplicacion = new representar();
 		  //Puntos p = new Puntos(); 
 	      //p.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-	      
+	      //blabla
 	   }
 
 }
