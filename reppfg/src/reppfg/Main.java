@@ -14,7 +14,6 @@ public class Main {
 		  //Puntos p = new Puntos(); 
 	      //p.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 	      
-	      
 	   }
 
 }
