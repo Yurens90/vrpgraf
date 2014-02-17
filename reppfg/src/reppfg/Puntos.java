@@ -3,9 +3,15 @@ import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Color;
 public class Puntos extends Frame {
+public Solomon sol;
    public Puntos() {
 	   this.setSize(200,200);
 	   this.setVisible(true);
+   }
+   
+   public void set_solomon(String nom) {
+	  sol = new Solomon();
+	  sol.lectura(nom);
    }
    
    public void paint (Graphics g) {

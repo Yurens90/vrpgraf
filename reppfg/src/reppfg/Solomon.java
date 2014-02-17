@@ -4,7 +4,16 @@ import java.util.ArrayList;
 public class Solomon {
    public String nombre;
    public ArrayList<int []> coord;
-   public void lectura () {
+   public int getix(int i, int x) {
+      return coord.get(i)[1];
+   }
+   public int getiy(int i, int y) {
+      return coord.get(i)[2];
+   }
+   public int getid(int i, int id) {
+      return coord.get(i)[0];
+   }
+   public void lectura (String nombre) {
 	      File archivo = null;
 	      FileReader fr = null;
 	      BufferedReader br = null;
@@ -12,7 +21,7 @@ public class Solomon {
 	      try {
 	         // Apertura del fichero y creacion de BufferedReader para poder
 	         // hacer una lectura comoda (disponer del metodo readLine()).
-	         archivo = new File ("C:\\C102.txt");
+	         archivo = new File (nombre);
 	         fr = new FileReader (archivo);
 	         br = new BufferedReader(fr);
 	         
@@ -37,9 +46,9 @@ public class Solomon {
 	            //System.out.println(numeros[1]+"--"+numeros[2]+"--"+numeros[3]);
 	            //System.out.println("return");
 	         }
-	         for (int i = 0; i < coord.size();i++) {
-	            System.out.println(coord.get(i)[0]+"--"+coord.get(i)[1]+"--"+coord.get(i)[2]);
-	         }
+	         //for (int i = 0; i < coord.size();i++) {
+	         //   System.out.println(coord.get(i)[0]+"--"+coord.get(i)[1]+"--"+coord.get(i)[2]);
+	         //}
 	      }
 	      catch(Exception e){
 	         e.printStackTrace();
