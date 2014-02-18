@@ -4,13 +4,16 @@ import java.util.ArrayList;
 public class Solomon {
    public String nombre;
    public ArrayList<int []> coord;
-   public int getix(int i, int x) {
+   public int size () {
+	   return coord.size();
+   }
+   public int getix(int i) {
       return coord.get(i)[1];
    }
-   public int getiy(int i, int y) {
+   public int getiy(int i) {
       return coord.get(i)[2];
    }
-   public int getid(int i, int id) {
+   public int getid(int i) {
       return coord.get(i)[0];
    }
    public void lectura (String nombre) {
@@ -35,7 +38,7 @@ public class Solomon {
 	        	 //System.out.println("return");
 	         }
 	         while((linea=br.readLine())!=null) {
-	            System.out.println(linea);
+	            //System.out.println(linea);
 	            String [] numeros = linea.split("\\s+");
 	            int aux[] = new int [3];
 	            aux[0] = Integer.parseInt(numeros[1]);

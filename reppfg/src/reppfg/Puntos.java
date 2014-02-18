@@ -1,11 +1,14 @@
 package reppfg;
+import java.awt.geom.*;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Color;
+import java.awt.BasicStroke;
+import java.awt.*;
 public class Puntos extends Frame {
 public Solomon sol;
    public Puntos() {
-	   this.setSize(200,200);
+	   this.setSize(500,500);
 	   this.setVisible(true);
    }
    
@@ -17,7 +20,19 @@ public Solomon sol;
    public void paint (Graphics g) {
 	   super.paint(g);
 	   g.setColor(Color.RED);
-	   g.drawLine(40, 50, 45, 68);
-	   g.drawLine(42, 65, 40, 69);
+	   for (int i = 1; i < sol.size();i++) {
+	      int x1, y1;
+	      x1 = sol.getix(i);
+	      y1 = sol.getiy(i);
+	      int x2, y2;
+	      x2 = sol.getix(i-1);
+	      y2 = sol.getiy(i-1);
+	      BasicStroke stroke = new BasicStroke(10.0f);
+	      Graphics2D g2d = (Graphics2D) g;
+	      //g2d.setStroke(stroke);
+	      g2d.drawLine(x1*5,y1*5,x2*5,y2*5);
+	   }
+	   //g.drawLine(40, 50, 45, 68);
+	   //g.drawLine(42, 65, 40, 69);
    }
 }
