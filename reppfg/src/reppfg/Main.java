@@ -13,6 +13,10 @@ public class Main {
 	      //representar aplicacion = new representar();
 		  Puntos p = new Puntos();
 		  p.set_solomon(args[0]);
+		  p.set_solucion(args[1]);
+		  //Solucion sl = new Solucion();
+		  //sl.lectura(args[1]);
+		  //sl.size();
 	      //p.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 	      //blabla
 	   }
