@@ -42,7 +42,8 @@ public Solucion sl;
 	   String cadena = sl.getsolucion();
 	   //char arr [] = sl.getsolucion().toCharArray();
 	   String arr [] = cadena.split(" ");
-	  
+	   
+	   /*
 	   for (int i = 1; i < arr.length; i++) {
 	      int x1, y1;
 	      x1 = sol.getix(Integer.parseInt(arr[i]));
@@ -55,7 +56,15 @@ public Solucion sl;
 	      g2d.setStroke(stroke);
 	      g2d.drawLine(x1*5,y1*5,x2*5,y2*5);
 	   } 
-	  
+	   */
+	   //el eje de coordenadas funciona al reves para el eje Y
+	   g.translate(250,250);
+	   g.drawLine(0,0,50,-50);
+	   g.drawLine(0,0,-50,-50);
+	   g.drawLine(0,0,50,50);
+	   g.drawLine(0,0,-50,50);
+	   //g.drawLine(0,0,0,-50);
+	   
 	   //g.drawLine(40, 50, 45, 68);
 	   //g.drawLine(42, 65, 40, 69);
    }
