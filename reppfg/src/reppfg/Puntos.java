@@ -43,7 +43,9 @@ public Solucion sl;
 	   //char arr [] = sl.getsolucion().toCharArray();
 	   String arr [] = cadena.split(" ");
 	   
-	   /*
+	   //g.translate(250,250);
+	   g.translate(50,50);
+	   
 	   for (int i = 1; i < arr.length; i++) {
 	      int x1, y1;
 	      x1 = sol.getix(Integer.parseInt(arr[i]));
@@ -53,16 +55,20 @@ public Solucion sl;
 	      y2 = sol.getiy(Integer.parseInt(arr[i-1]));
 	      BasicStroke stroke = new BasicStroke(2.0f);
 	      Graphics2D g2d = (Graphics2D) g;
-	      g2d.setStroke(stroke);
+	      //g2d.setStroke(stroke);
+	      //g2d.drawLine(x1*5,y1*5,x2*5,y2*5);
+	      //y1 = y1 * -1;
+	      //y2 = y2 * -1;
 	      g2d.drawLine(x1*5,y1*5,x2*5,y2*5);
+	      
 	   } 
-	   */
+	   
 	   //el eje de coordenadas funciona al reves para el eje Y
-	   g.translate(250,250);
-	   g.drawLine(0,0,50,-50);
-	   g.drawLine(0,0,-50,-50);
-	   g.drawLine(0,0,50,50);
-	   g.drawLine(0,0,-50,50);
+	   //g.translate(250,250);
+	   //g.drawLine(0,0,50,-50);
+	   //g.drawLine(0,0,-50,-50);
+	   //g.drawLine(0,0,50,50);
+	   //g.drawLine(0,0,-50,50);
 	   //g.drawLine(0,0,0,-50);
 	   
 	   //g.drawLine(40, 50, 45, 68);
