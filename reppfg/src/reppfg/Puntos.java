@@ -24,7 +24,10 @@ public Solucion sl;
    }
    public void paint (Graphics g) {
 	   super.paint(g);
-	   g.setColor(Color.RED);
+	   //String col = "Color.BLUE";
+	   Color[] colores = {Color.RED,Color.BLACK,Color.BLUE,Color.GREEN,Color.MAGENTA,Color.ORANGE,Color.RED,Color.YELLOW,Color.PINK,Color.LIGHT_GRAY,Color.CYAN};
+
+	   //g.setColor(colores[1]);
 	   /*
 	   for (int i = 1; i < sol.size();i++) {
 	      int x1, y1;
@@ -44,7 +47,9 @@ public Solucion sl;
 	   String arr [] = cadena.split(" ");
 	   
 	   //g.translate(250,250);
-	   g.translate(100,600);	   
+	   g.translate(100,700);
+	   int j = 0;
+	   g.setColor(colores[j]);
 	   for (int i = 1; i < arr.length; i++) {
 	      int x1, y1;
 	      x1 = sol.getix(Integer.parseInt(arr[i]));
@@ -58,7 +63,15 @@ public Solucion sl;
 	      //g2d.drawLine(x1*5,y1*5,x2*5,y2*5);
 	      //y1 = y1 * -1;
 	      //y2 = y2 * -1;
-	      g2d.drawLine(x1*5,y1*-5,x2*5,y2*-5);
+	      System.out.println("Punto -1: "+arr[i-1]+ ", punto i: "+arr[i]+", x1: "+x2+", x2: "+x1+", y1: "+y2+", y2: "+y1);
+	      g2d.drawLine(x2*7,y2*-7,x1*7,y1*-7);
+	      if ((Integer.parseInt(arr[i-1]) == 0) && (Integer.parseInt(arr[i]) == 0)) {
+	    	  j++;
+	    	  System.out.println("Color: "+j);
+	    	  if (j > colores.length)
+	    	     j = 0;
+	    	  g2d.setColor(colores[j]);
+	      }
 	      //g2d.drawLine(x1,y1,x2,y2);
 	      
 	   } 	   
