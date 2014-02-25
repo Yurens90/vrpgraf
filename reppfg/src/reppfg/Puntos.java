@@ -5,12 +5,17 @@ import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.BasicStroke;
 import java.awt.*;
-public class Puntos extends Frame {
+import java.awt.event.*;
+public class Puntos extends Frame implements KeyListener {
 public Solomon sol;
 public Solucion sl;
+public int x = 100;
+public int y = 700;
+public int escala = 7;
    public Puntos() {
 	   this.setSize(500,500);
 	   this.setVisible(true);
+	   addKeyListener( this );
    }
    
    public void set_solomon(String nom) {
@@ -22,9 +27,52 @@ public Solucion sl;
 	   sl = new Solucion();
 	   sl.lectura(nom);
    }
+   
+   // manejar evento de pulsación de cualquier tecla
+   public void keyPressed( KeyEvent evento )
+   {
+	  //System.out.println("Se ha pulsado la tecla: "+evento.getKeyText(evento.getKeyCode()));
+	  System.out.println("Se ha pulsado la tecla: "+evento.getKeyCode());
+	  if (evento.getKeyCode() == 38)
+         y = y-10;
+	  if (evento.getKeyCode() == 40)
+         y = y+10;
+	  if (evento.getKeyCode() == 39)
+	     x = x+10;
+	  if (evento.getKeyCode() == 37)
+	     x = x-10;
+	  if (evento.getKeyCode() == 107) { //mas
+	     escala += 1;
+	     x = x-50;
+	     y = y+70;
+	  }
+	  if (evento.getKeyCode() == 109) { //menos
+         escala -= 1;
+         x = x+50;
+         y = y-70;
+	  }
+      //linea1 = "Se oprimió tecla: " + evento.getKeyText( evento.getKeyCode() );
+      //establecerLineas2y3( evento );
+	  repaint();
+   }
+
+   // manejar evento de liberación de cualquier tecla
+   public void keyReleased( KeyEvent evento )
+   {
+      //linea1 = "Se soltó tecla: " + evento.getKeyText( evento.getKeyCode() );
+      //establecerLineas2y3( evento );
+   }
+
+   // manejar evento de pulsación de una tecla de acción
+   public void keyTyped( KeyEvent evento )
+   {
+      //linea1 = "Se escribió tecla: " + evento.getKeyChar();
+      //establecerLineas2y3( evento );
+   }
    public void paint (Graphics g) {
 	   super.paint(g);
 	   //String col = "Color.BLUE";
+       System.out.println("hola");
 	   Color[] colores = {Color.RED,Color.BLACK,Color.BLUE,Color.GREEN,Color.MAGENTA,Color.ORANGE,Color.RED,Color.YELLOW,Color.PINK,Color.LIGHT_GRAY,Color.CYAN};
 
 	   //g.setColor(colores[1]);
@@ -47,7 +95,7 @@ public Solucion sl;
 	   String arr [] = cadena.split(" ");
 	   
 	   //g.translate(250,250);
-	   g.translate(100,700);
+	   g.translate(x,y);
 	   int j = 0;
 	   g.setColor(colores[j]);
 	   for (int i = 1; i < arr.length; i++) {
@@ -64,7 +112,7 @@ public Solucion sl;
 	      //y1 = y1 * -1;
 	      //y2 = y2 * -1;
 	      System.out.println("Punto -1: "+arr[i-1]+ ", punto i: "+arr[i]+", x1: "+x2+", x2: "+x1+", y1: "+y2+", y2: "+y1);
-	      g2d.drawLine(x2*7,y2*-7,x1*7,y1*-7);
+	      g2d.drawLine(x2*escala,y2*escala*-1,x1*escala,y1*escala*-1);
 	      if ((Integer.parseInt(arr[i-1]) == 0) && (Integer.parseInt(arr[i]) == 0)) {
 	    	  j++;
 	    	  System.out.println("Color: "+j);

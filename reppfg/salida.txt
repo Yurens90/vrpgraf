@@ -1,5 +1,5 @@
 Iteracion_mejor_solucion_intercambiar;tiempo;ruta;coste;numero_vehiculos_usados
-0;0;0 21 23 25 24 20 10 11 8 7 3 4 5 2 0 0 1 6 22 17 15 16 14 12 13 0 0 9 19 18 0 ;296.082;3
+0;0;0 22 20 25 21 10 8 7 5 4 6 9 3 2 0 0 23 11 1 12 14 15 16 19 18 24 13 0 0 17 0 ;296.082;3
 Numero_iteracion;tiempo;ruta;coste;numero_vehiculos_usados
 0;0;0 21 23 25 24 20 10 11 8 7 3 4 5 2 0 0 1 6 22 17 15 16 14 12 13 0 0 9 19 18 0 ;296.082;3
 Tiempo total: 0 segundos
