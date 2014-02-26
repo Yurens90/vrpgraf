@@ -8,6 +8,9 @@ public class Main {
 
 	   public static void main( String args[] )
 	   {
+		  //JFrame MiVentana = new JFrame("MI PRIMER VENTANA" );
+		  //MiVentana.setVisible(true);
+		  //MiVentana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	      //Solomon solo = new Solomon();
 	      //solo.lectura(args[0]);
 	      //representar aplicacion = new representar();
@@ -17,8 +20,7 @@ public class Main {
 		  //Solucion sl = new Solucion();
 		  //sl.lectura(args[1]);
 		  //sl.size();
-	      //p.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-	      //blabla
+	      //this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 	   }
 
 }
