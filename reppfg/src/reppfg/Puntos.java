@@ -120,7 +120,6 @@ public int escala = 7;
 	    	     j = 0;
 	    	  g2d.setColor(colores[j]);
 	      }
-	      //g2d.drawLine(x1,y1,x2,y2);
 	      
 	   } 	   
 	   //el eje de coordenadas funciona al reves para el eje Y
