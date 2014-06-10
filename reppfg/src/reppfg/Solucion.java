@@ -36,6 +36,7 @@ public class Solucion {
 	         String linea;
 	         linea = br.readLine();
 	         linea = br.readLine();
+	         System.out.println(linea);
 	         String [] numeros = linea.split(";");
 	         pt = numeros[2];
 	         //System.out.println(numeros[2]);
@@ -61,6 +62,7 @@ public class Solucion {
 	         //for (int i = 0; i < coord.size();i++) {
 	         //   System.out.println(coord.get(i)[0]+"--"+coord.get(i)[1]+"--"+coord.get(i)[2]);
 	         //}
+	         System.out.println(pt);
 	      }
 	      catch(Exception e){
 	         e.printStackTrace();
@@ -70,6 +72,7 @@ public class Solucion {
 	         // una excepcion.
 	         try{                   
 	            if( null != fr ){  
+	               System.out.println("hola");
 	               fr.close();    
 	            }                 
 	         }catch (Exception e2){
